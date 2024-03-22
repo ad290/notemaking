@@ -3,8 +3,7 @@ import NotesList from './components/NotesList.js'
 import { nanoid } from "nanoid";
 import Search from "./components/Search.js";
 import Header from "./components/Header.js";
-import AddNote from "./components/AddNote.js";
-import Note from "./components/Note.js";
+
 
 function App() {
   const [noteText, setNoteText] = useState("")
@@ -37,11 +36,13 @@ function App() {
       date: date,
     };
 
-    const updatedNotes = [...myNotes, myNewNote];
+    const updatedNotes = [...myNotes,myNewNote];
     setMyNotes(updatedNotes);
     setNoteText("");
   }
 
+
+  
   function deleteNote(id) {
     const updatedNotes = myNotes.filter((note) => note.id !== id);
     setMyNotes(updatedNotes);

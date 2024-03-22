@@ -1,7 +1,7 @@
 import React from "react";
-import { FaTrashAlt } from "react-icons/fa"; 
+import { FaTrashAlt } from "react-icons/fa";
 
-export default function Note({ note, handleDeleteNotes, handleDownloadNote }) {
+export default function Note({ note, handleDeleteNotes}) {
   const handleDownload = () => {
     const blob = new Blob([note.text], { type: "text/plain" });
     const url = window.URL.createObjectURL(blob);
@@ -18,20 +18,19 @@ export default function Note({ note, handleDeleteNotes, handleDownloadNote }) {
     <div className="note">
       <span>{note.text}</span>
       <div className="note-footer">
-        <small>{note.date}</small> 
+        <small>{note.date}</small>
         <div className="delete-icon" onClick={() => handleDeleteNotes(note.id)}>
           <FaTrashAlt />
         </div>
         <button
-  onClick={handleDownload}
-  className="download"
-  style={{
-    borderRadius: '5px'
-  }}
->
-  Download
-</button>
-
+          onClick={handleDownload}
+          className="download"
+          style={{
+            borderRadius: "5px",
+          }}
+        >
+          Download
+        </button>
       </div>
     </div>
   );

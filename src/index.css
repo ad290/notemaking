@@ -156,7 +156,7 @@ code {
   background-color: #777;
   border-radius: 30px;
   transform: translateX(-20px);
-  /*translateX(-(w-h))*/
+ 
   transition: 0.2s;
  }
  .header h1{
@@ -166,7 +166,7 @@ code {
  }
  input:checked + .slider:before {
   transform: translateX(20px);
-  /*translateX(w-h)*/
+ 
   background-color: limeGreen;
  }
  
@@ -177,7 +177,7 @@ code {
  .switch200 .slider:before {
   width: 200%;
   transform: translateX(-82px);
-  /*translateX(-(w-h))*/
+ 
  }
  
  .switch200 input:checked + .slider:before {
